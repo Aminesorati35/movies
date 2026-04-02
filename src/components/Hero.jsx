@@ -65,7 +65,7 @@ export default function Hero({ onOpenDetail }) {
           </span>
           <span className="text-white/25">·</span>
           <span className="text-white/50">
-            {m.year} · {m.duration} · {m.genre}
+            {m.year} · {m.duration} · {m.genres}
           </span>
         </div>
 

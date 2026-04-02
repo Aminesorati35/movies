@@ -1,5 +1,19 @@
 export const allContent = [
   {
+  id: 14,
+  title: "Your Heart Will Be Broken",
+  poster: "https://image.tmdb.org/t/p/original/7wIBfBl2gejt6xHxNSK0reVIm7E.jpg",
+  backdrop: "https://raisely-images.imgix.net/uploads/1-x-9-e-0-q-wonw-634-nh-is-rdvnneeqv-n-webp-46a638.webp?fm=jpg&fit=max&w=700&auto=format&q=62",
+  rating: "8.1",
+  year: "2026",
+  duration: "2h 14m",
+  quality: "HD",
+  type: "movie",
+  genres: ["Drama", "Romance"],
+  description:
+    "High school student Polina is saved from bullying at her new school and makes a deal with the main bully, Bars. He pretends to be her boyfriend and protects her, while she agrees to follow his rules. But as their fake relationship grows, real feelings begin to appear.",
+},
+  {
     id: 1,
     title: "Godzilla x Kong",
     poster: "https://image.tmdb.org/t/p/w500/z1p34vh7dEOnLDmyCrlUVLuoDzd.jpg",
@@ -49,7 +63,7 @@ export const allContent = [
     title: "Dune: Part Two",
     poster: "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
     backdrop:
-      "https://image.tmdb.org/t/p/original/628Dep6AxEtDxjZoGP78TsOxYbK.jpg",
+      "https://beam-images.warnermediacdn.com/2024-05/scrid-1926466218111380_wb_duneparttwo_3000x3000_2024_lan-en-us_pur-tileburnedin.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com",
     rating: "8.8",
     year: "2024",
     duration: "2h 46m",
@@ -204,12 +218,23 @@ export const allContent = [
 
 export const heroMovies = [
   {
+  id: 14,
+  title: "Your Heart Will Be Broken",
+  backdrop: "https://raisely-images.imgix.net/uploads/1-x-9-e-0-q-wonw-634-nh-is-rdvnneeqv-n-webp-46a638.webp?fm=jpg&fit=max&w=700&auto=format&q=62",
+  rating: "8.1",
+  year: "2026",
+  duration: "2h 14m",
+  genres: "Drama · Romance",
+  description:
+    "High school student Polina is saved from bullying at her new school and makes a deal with the main bully, Bars. He pretends to be her boyfriend and protects her, while she agrees to follow his rules. But as their fake relationship grows, real feelings begin to appear.",
+},
+  {
     id: 4,
     title: "Dune: Part Two",
     rating: "8.8",
     year: "2024",
     duration: "2h 46m",
-    genre: "Action · Adventure · Sci-Fi",
+    genres: "Action · Adventure · Sci-Fi",
     description:
       "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.",
     backdrop:
@@ -221,7 +246,7 @@ export const heroMovies = [
     rating: "8.4",
     year: "2023",
     duration: "3h 0m",
-    genre: "Biography · Drama · History",
+    genres: "Biography · Drama · History",
     description:
       "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
     backdrop:
@@ -233,7 +258,7 @@ export const heroMovies = [
     rating: "9.1",
     year: "2013",
     duration: "4 Seasons",
-    genre: "Animation · Action · Drama",
+    genres: "Animation · Action · Drama",
     description:
       "After his hometown is destroyed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans.",
     backdrop:
@@ -245,7 +270,7 @@ export const heroMovies = [
     rating: "8.3",
     year: "2002",
     duration: "+500 episodes",
-    genre: "Action · Drama",
+    genres: "Action · Drama",
     description:
       "A young ninja who dreams of becoming Hokage and earning everyone's respect despite being rejected by his village.",
     backdrop: "https://i.postimg.cc/BvzvpL5w/download-(3).jpg",
@@ -253,7 +278,7 @@ export const heroMovies = [
 ];
 
 export const trendingMovies = allContent.filter((c) =>
-  [7, 12, 13, 8, 9, 10].includes(c.id)
+  [14,7, 12, 13, 8, 9,].includes(c.id)
 );
 
 export const newReleases = allContent.filter((c) =>
