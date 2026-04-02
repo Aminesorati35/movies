@@ -9,7 +9,7 @@ export default function Footer() {
               alt="logo"
               className="w-8 h-8 rounded-lg"
             />
-            <span className="text-white font-black">WatchX</span>
+            <span className="text-white font-black">Beflix</span>
           </div>
 
           <p className="text-white/30 text-sm leading-relaxed">

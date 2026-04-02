@@ -14,7 +14,7 @@ export default function Navbar({ scrolled, onSignUp }) {
           className="w-9 h-9 rounded-xl object-contain"
         />
         <span className="text-white font-black text-lg tracking-tight">
-          WatchX
+          Beflix
         </span>
       </div>
 
