@@ -213,7 +213,7 @@ export const heroMovies = [
     description:
       "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.",
     backdrop:
-      "https://image.tmdb.org/t/p/original/628Dep6AxEtDxjZoGP78TsOxYbK.jpg",
+      "https://beam-images.warnermediacdn.com/2024-05/scrid-1926466218111380_wb_duneparttwo_3000x3000_2024_lan-en-us_pur-tileburnedin.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com",
   },
   {
     id: 5,
