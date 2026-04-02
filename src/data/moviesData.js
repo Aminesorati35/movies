@@ -1,5 +1,19 @@
 export const allContent = [
   {
+  id: 15,
+  title: "Super Mario Galaxy 2026",
+  poster: "https://www.critikat.com/wp-content/uploads/2026/03/Super-Mario-Galaxy-le-film-affiche.jpg",
+  backdrop: "https://universalpictures.ca/wp-content/uploads/2025/11/Universal_HomeMainCarousel_1920x1025-1.jpg",
+  rating: "8.9",
+  year: "2026",
+  duration: "1h 50m",
+  quality: "HD",
+  type: "movie",
+  genres: ["Adventure", "Family", "Fantasy", "Animation"],
+  description:
+    "Mario embarks on a new cosmic adventure across the galaxy to rescue Princess Peach from Bowser. Traveling between planets, he discovers new powers and allies while facing dangerous enemies in a visually stunning space journey.",
+},
+  {
   id: 14,
   title: "Your Heart Will Be Broken",
   poster: "https://image.tmdb.org/t/p/original/7wIBfBl2gejt6xHxNSK0reVIm7E.jpg",
@@ -217,6 +231,18 @@ export const allContent = [
 ];
 
 export const heroMovies = [
+   {
+  id: 15,
+  title: "Super Mario Galaxy 2026",
+  backdrop: "https://universalpictures.ca/wp-content/uploads/2025/11/Universal_HomeMainCarousel_1920x1025-1.jpg",
+  rating: "8.9",
+  year: "2026",
+  duration: "1h 50m",
+  type: "movie",
+  genres: "Adventure · Family · Fantasy · Animation",
+  description:
+    "Mario embarks on a new cosmic adventure across the galaxy to rescue Princess Peach from Bowser. Traveling between planets, he discovers new powers and allies while facing dangerous enemies in a visually stunning space journey.",
+},
   {
   id: 14,
   title: "Your Heart Will Be Broken",
@@ -228,18 +254,7 @@ export const heroMovies = [
   description:
     "High school student Polina is saved from bullying at her new school and makes a deal with the main bully, Bars. He pretends to be her boyfriend and protects her, while she agrees to follow his rules. But as their fake relationship grows, real feelings begin to appear.",
 },
-  {
-    id: 4,
-    title: "Dune: Part Two",
-    rating: "8.8",
-    year: "2024",
-    duration: "2h 46m",
-    genres: "Action · Adventure · Sci-Fi",
-    description:
-      "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.",
-    backdrop:
-      "https://beam-images.warnermediacdn.com/2024-05/scrid-1926466218111380_wb_duneparttwo_3000x3000_2024_lan-en-us_pur-tileburnedin.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com",
-  },
+
   {
     id: 5,
     title: "Oppenheimer",
@@ -278,7 +293,7 @@ export const heroMovies = [
 ];
 
 export const trendingMovies = allContent.filter((c) =>
-  [14,7, 12, 13, 8, 9,].includes(c.id)
+  [15,14,7, 12, 13, 8,].includes(c.id)
 );
 
 export const newReleases = allContent.filter((c) =>
