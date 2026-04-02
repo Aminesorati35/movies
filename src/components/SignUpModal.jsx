@@ -58,7 +58,7 @@ export default function SignUpModal({ onClose, onLocker }) {
         </div>
 
         <h2 className="text-center text-white text-xl font-black mb-1">
-          Join HiiMovie
+          Join Beflix
         </h2>
 
         <p className="text-center text-white/40 text-sm mb-6">

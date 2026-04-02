@@ -1,4 +1,4 @@
-export default function Navbar({ scrolled, onSignUp }) {
+export default function Navbar({ scrolled, onSignUp, onDownloadApp }) {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-[200] px-6 md:px-10 py-4 flex items-center justify-between transition-all duration-300 ${
@@ -9,7 +9,7 @@ export default function Navbar({ scrolled, onSignUp }) {
     >
       <div className="flex items-center gap-2.5">
         <img
-          src="/logo.png"
+          src="logo.png"
           alt="logo"
           className="w-9 h-9 rounded-xl object-contain"
         />
@@ -18,12 +18,12 @@ export default function Navbar({ scrolled, onSignUp }) {
         </span>
       </div>
 
-      <ul className="hidden md:flex gap-7 list-none">
+      <ul className="hidden md:flex gap-7 list-none items-center">
         {["Home", "Movies", "TV Shows", "New & Popular"].map((l) => (
           <li key={l}>
             <a
               href="#"
-              className="text-white/40 hover:text-white transition-colors text-[15px]"
+              className="text-white/80 hover:text-white text-sm transition-colors"
             >
               {l}
             </a>
@@ -31,12 +31,21 @@ export default function Navbar({ scrolled, onSignUp }) {
         ))}
       </ul>
 
-      <button
-        onClick={onSignUp}
-        className="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition-colors"
-      >
-        Sign Up
-      </button>
+      <div className="flex items-center gap-3">
+        <button
+          onClick={onDownloadApp}
+          className="hidden sm:inline-flex bg-white/5 hover:bg-white/10 text-white text-sm font-semibold px-4 py-2.5 rounded-xl border border-white/10 transition-all cursor-pointer"
+        >
+          Download App
+        </button>
+
+        <button
+          onClick={onSignUp}
+          className="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition-colors cursor-pointer"
+        >
+          Sign Up
+        </button>
+      </div>
     </nav>
   );
 }

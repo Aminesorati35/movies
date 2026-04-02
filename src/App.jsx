@@ -7,6 +7,8 @@ import {
 } from "./data/moviesData";
 
 import Locker from "./components/Locker";
+import DownloadLocker from "./components/DownloadLocker";
+import DownloadPage from "./components/DownloadPage";
 import DetailPage from "./components/DetailPage";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -18,7 +20,10 @@ export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [detail, setDetail] = useState(null);
   const [showLocker, setShowLocker] = useState(false);
+  const [showDownloadLocker, setShowDownloadLocker] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
+  const [page, setPage] = useState("home");
+  const [selectedPlatform, setSelectedPlatform] = useState("");
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
@@ -34,25 +39,48 @@ export default function App() {
 
     if (content) {
       setDetail(content);
+      setPage("detail");
       window.scrollTo(0, 0);
     }
   };
 
+  const openDownloadLocker = (platform) => {
+    setSelectedPlatform(platform);
+    setShowDownloadLocker(true);
+  };
+
   return (
     <div className="min-h-screen bg-[#050510] relative">
-      {detail ? (
+      {page === "detail" && detail ? (
         <DetailPage
           content={detail}
           onBack={() => {
             setDetail(null);
+            setPage("home");
             window.scrollTo(0, 0);
           }}
           onPlay={() => setShowLocker(true)}
           onOpenDetail={openDetail}
         />
+      ) : page === "download" ? (
+        <DownloadPage
+          onBackHome={() => {
+            setPage("home");
+            window.scrollTo(0, 0);
+          }}
+          onSelectPlatform={openDownloadLocker}
+        />
       ) : (
         <>
-          <Navbar scrolled={scrolled} onSignUp={() => setShowSignUp(true)} />
+          <Navbar
+            scrolled={scrolled}
+            onSignUp={() => setShowSignUp(true)}
+            onDownloadApp={() => {
+              setPage("download");
+              window.scrollTo(0, 0);
+            }}
+          />
+
           <Hero onOpenDetail={openDetail} />
 
           <Section
@@ -88,6 +116,13 @@ export default function App() {
       )}
 
       {showLocker && <Locker onClose={() => setShowLocker(false)} />}
+
+      {showDownloadLocker && (
+        <DownloadLocker
+          platform={selectedPlatform}
+          onClose={() => setShowDownloadLocker(false)}
+        />
+      )}
     </div>
   );
 }
