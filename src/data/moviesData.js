@@ -3,7 +3,7 @@ export const allContent = [
   id: 14,
   title: "Your Heart Will Be Broken",
   poster: "https://image.tmdb.org/t/p/original/7wIBfBl2gejt6xHxNSK0reVIm7E.jpg",
-  backdrop: "https://raisely-images.imgix.net/uploads/1-x-9-e-0-q-wonw-634-nh-is-rdvnneeqv-n-webp-46a638.webp?fm=jpg&fit=max&w=700&auto=format&q=62",
+  backdrop: "https://image.tmdb.org/t/p/original/1x9e0qWonw634NhIsRdvnneeqvN.jpg",
   rating: "8.1",
   year: "2026",
   duration: "2h 14m",
@@ -220,7 +220,7 @@ export const heroMovies = [
   {
   id: 14,
   title: "Your Heart Will Be Broken",
-  backdrop: "https://raisely-images.imgix.net/uploads/1-x-9-e-0-q-wonw-634-nh-is-rdvnneeqv-n-webp-46a638.webp?fm=jpg&fit=max&w=700&auto=format&q=62",
+  backdrop: "https://image.tmdb.org/t/p/original/1x9e0qWonw634NhIsRdvnneeqvN.jpg",
   rating: "8.1",
   year: "2026",
   duration: "2h 14m",

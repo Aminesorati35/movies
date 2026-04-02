@@ -25,6 +25,22 @@ export default function App() {
   const [page, setPage] = useState("home");
   const [selectedPlatform, setSelectedPlatform] = useState("");
 
+  const [isTikTokBrowser, setIsTikTokBrowser] = useState(false);
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    const ua = (navigator.userAgent || "").toLowerCase();
+
+    const isTikTok =
+      ua.includes("tiktok") ||
+      ua.includes("bytedance") ||
+      ua.includes("musical_ly") ||
+      ua.includes("aweme");
+
+    setIsTikTokBrowser(isTikTok);
+    setChecked(true);
+  }, []);
+
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", fn);
@@ -49,6 +65,34 @@ export default function App() {
     setShowDownloadLocker(true);
   };
 
+  if (!checked) return null;
+
+  // 👉 ONLY SHOW GIF IF TIKTOK
+  if (isTikTokBrowser) {
+    return (
+      <div
+        style={{
+          minHeight: "100vh",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#000",
+        }}
+      >
+        <img
+          src="/images/browser/5.gif"
+          alt="Open in browser"
+          style={{
+            width: "300px",
+            maxWidth: "90%",
+          }}
+        />
+      </div>
+    );
+  }
+
+  // 👉 NORMAL WEBSITE
   return (
     <div className="min-h-screen bg-[#050510] relative">
       {page === "detail" && detail ? (
