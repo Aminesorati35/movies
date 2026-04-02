@@ -38,48 +38,44 @@ export default function App() {
     }
   };
 
-  if (showLocker) {
-    return <Locker onClose={() => setShowLocker(false)} />;
-  }
-
-  if (detail) {
-    return (
-      <DetailPage
-        content={detail}
-        onBack={() => {
-          setDetail(null);
-          window.scrollTo(0, 0);
-        }}
-        onPlay={() => setShowLocker(true)}
-        onOpenDetail={openDetail}
-      />
-    );
-  }
-
   return (
-    <div className="min-h-screen bg-[#050510]">
-      <Navbar scrolled={scrolled} onSignUp={() => setShowSignUp(true)} />
-      <Hero onOpenDetail={openDetail} />
+    <div className="min-h-screen bg-[#050510] relative">
+      {detail ? (
+        <DetailPage
+          content={detail}
+          onBack={() => {
+            setDetail(null);
+            window.scrollTo(0, 0);
+          }}
+          onPlay={() => setShowLocker(true)}
+          onOpenDetail={openDetail}
+        />
+      ) : (
+        <>
+          <Navbar scrolled={scrolled} onSignUp={() => setShowSignUp(true)} />
+          <Hero onOpenDetail={openDetail} />
 
-      <Section
-        title="🔥 Trending Now"
-        items={trendingMovies}
-        onOpenDetail={openDetail}
-      />
+          <Section
+            title="🔥 Trending Now"
+            items={trendingMovies}
+            onOpenDetail={openDetail}
+          />
 
-      <Section
-        title="🎬 New Releases"
-        items={newReleases}
-        onOpenDetail={openDetail}
-      />
+          <Section
+            title="🎬 New Releases"
+            items={newReleases}
+            onOpenDetail={openDetail}
+          />
 
-      <Section
-        title="⭐ Recommended"
-        items={recommended}
-        onOpenDetail={openDetail}
-      />
+          <Section
+            title="⭐ Recommended"
+            items={recommended}
+            onOpenDetail={openDetail}
+          />
 
-      <Footer />
+          <Footer />
+        </>
+      )}
 
       {showSignUp && (
         <SignUpModal
@@ -90,6 +86,8 @@ export default function App() {
           }}
         />
       )}
+
+      {showLocker && <Locker onClose={() => setShowLocker(false)} />}
     </div>
   );
 }
