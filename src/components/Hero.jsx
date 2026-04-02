@@ -81,8 +81,8 @@ export default function Hero({ onOpenDetail }) {
             boxShadow: "0 8px 30px rgba(99,102,241,0.4)",
           }}
         >
-          <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center pl-0.5">
-            <Play size={13} />
+          <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center pl-0.5">
+            <Play size={25} />
           </div>
           Watch Now
         </button>

@@ -2,26 +2,34 @@ import { useState } from "react";
 import { X } from "./icons/Icons";
 
 export default function SignUpModal({ onClose, onLocker }) {
-  const [username, setUsername] = useState("");
-  const [code, setCode] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
-  const [codeErr, setCodeErr] = useState(false);
 
   const submit = () => {
     setErr("");
-    setCodeErr(false);
 
-    if (!username.trim()) {
-      setErr("Please enter a username.");
+    if (!email.trim()) {
+      setErr("Please enter your email.");
       return;
     }
 
-    if (code.trim()) {
-      setCodeErr(true);
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setErr("Please enter a valid email address.");
       return;
     }
 
-    setErr("Invalid activation code. Get one below!");
+    if (!password.trim()) {
+      setErr("Please enter your password.");
+      return;
+    }
+
+    if (password.length < 6) {
+      setErr("Password must be at least 6 characters.");
+      return;
+    }
+
+    onLocker();
   };
 
   return (
@@ -52,8 +60,9 @@ export default function SignUpModal({ onClose, onLocker }) {
         <h2 className="text-center text-white text-xl font-black mb-1">
           Join HiiMovie
         </h2>
+
         <p className="text-center text-white/40 text-sm mb-6">
-          Create an account to start watching
+          Create your account to continue
         </p>
 
         {err && (
@@ -63,44 +72,26 @@ export default function SignUpModal({ onClose, onLocker }) {
         )}
 
         <input
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Username"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email address"
           className="w-full bg-white/5 border border-white/10 focus:border-indigo-500/60 rounded-xl px-4 py-3 text-white placeholder-white/30 outline-none text-sm mb-3 transition-colors"
         />
 
         <input
-          value={code}
-          onChange={(e) => {
-            setCode(e.target.value);
-            setCodeErr(false);
-          }}
-          placeholder="Activation Code"
-          className={`w-full bg-white/5 border ${
-            codeErr ? "border-red-500/60" : "border-white/10"
-          } rounded-xl px-4 py-3 text-white placeholder-white/30 outline-none text-sm mb-1 transition-colors`}
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+          className="w-full bg-white/5 border border-white/10 focus:border-indigo-500/60 rounded-xl px-4 py-3 text-white placeholder-white/30 outline-none text-sm mb-4 transition-colors"
         />
-
-        {codeErr && (
-          <p className="text-red-400 text-xs mb-4 pl-1">
-            The activation code is incorrect.
-          </p>
-        )}
-
-        {!codeErr && <div className="mb-4" />}
 
         <button
           onClick={submit}
-          className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-xl text-sm mb-3 transition-colors"
+          className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-xl text-sm transition-colors"
         >
           Sign Up
-        </button>
-
-        <button
-          onClick={onLocker}
-          className="w-full border border-indigo-500/40 hover:border-indigo-500 text-indigo-400 hover:text-indigo-300 font-medium py-3 rounded-xl text-sm transition-all"
-        >
-          Get activation code →
         </button>
       </div>
     </div>

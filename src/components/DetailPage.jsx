@@ -65,7 +65,7 @@ export default function DetailPage({ content, onBack, onPlay, onOpenDetail }) {
                   "0 0 50px rgba(99,102,241,0.5), 0 0 100px rgba(99,102,241,0.2)",
               }}
             >
-              <Play size={38}  />
+              <Play size={60}  />
             </div>
             <span className="text-white text-sm font-bold group-hover:text-white transition-colors tracking-wide">
               Play Now
@@ -139,8 +139,8 @@ export default function DetailPage({ content, onBack, onPlay, onOpenDetail }) {
                 boxShadow: "0 8px 30px rgba(99,102,241,0.45)",
               }}
             >
-              <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center pl-0.5">
-                <Play size={13} />
+              <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center pl-0.5">
+                <Play size={25} />
               </div>
               Watch Now
             </button>
@@ -185,7 +185,7 @@ export default function DetailPage({ content, onBack, onPlay, onOpenDetail }) {
                         className="w-9 h-9 rounded-full flex items-center justify-center border border-white/20 transition-all duration-200 group-hover:scale-110 pl-0.5"
                         style={{ background: "rgba(99,102,241,0.85)" }}
                       >
-                        <Play size={15} />
+                        <Play size={20} />
                       </div>
                     </div>
                   </div>
