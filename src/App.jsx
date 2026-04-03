@@ -39,7 +39,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:slug" element={<DetailPage />} />
+        <Route path="/watch/:id" element={<DetailPage />} />
         <Route path="/download" element={<DownloadPage />} />
       </Routes>
     </div>

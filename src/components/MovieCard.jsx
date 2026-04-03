@@ -12,7 +12,7 @@ export default function MovieCard({ movie }) {
 
   return (
     <div
-      onClick={() => navigate(`/${slugify(movie.title)}-${movie.id}`)}
+      onClick={() => navigate(`/watch/${movie.id}`)}
       className="group relative rounded-xl overflow-hidden cursor-pointer"
       style={{ aspectRatio: "2/3" }}
     >
