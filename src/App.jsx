@@ -6,9 +6,7 @@ import DownloadPage from "./pages/DownloadPage";
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
-  const [isTikTokBrowser, setIsTikTokBrowser] = useState(null);
-
-
+  
 
   // ✅ الموقع عادي
   return (
