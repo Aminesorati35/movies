@@ -30,12 +30,12 @@ export default function Locker({ onClose }) {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <button
+          {/* <button
             onClick={onClose}
             className="absolute top-3 right-3 z-10 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 transition-all hover:scale-110"
           >
             <X />
-          </button>
+          </button> */}
 
           <iframe
             src="https://appchecker.site/cl/i/qnn766"

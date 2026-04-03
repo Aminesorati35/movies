@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { allContent, heroMovies } from "../data/moviesData";
 import { Play, Star } from "./icons/Icons";
 
-export default function Hero({ onOpenDetail }) {
+export default function Hero() {
   const [idx, setIdx] = useState(0);
   const [vis, setVis] = useState(true);
+  const navigate = useNavigate();
   const m = heroMovies[idx];
 
   useEffect(() => {
@@ -18,10 +20,15 @@ export default function Hero({ onOpenDetail }) {
 
     return () => clearInterval(t);
   }, []);
+  const slugify = (text) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 
   const handleClick = () => {
     const content = allContent.find((x) => x.id === m.id);
-    if (content) onOpenDetail(content);
+    if (content) navigate(`/${slugify(content.title)}-${content.id}`)
   };
 
   return (

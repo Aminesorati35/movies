@@ -228,6 +228,7 @@ export const allContent = [
   genres: ["Adventure", "Family", "Fantasy", "Animation"],
   description:
     "Mario embarks on a new cosmic adventure across the galaxy to rescue Princess Peach from Bowser. Traveling between planets, he discovers new powers and allies while facing dangerous enemies in a visually stunning space journey.",
+    videoUrl: "https://moviqa.com/Universal.mp4",
 },
    {
   id: 16,
@@ -260,6 +261,7 @@ export const allContent = [
     "A new love story unfolds when teen matchmaker Kitty reunites with her long-distance boyfriend at the same boarding school attended by her late mother.",
   seasons: 3,
   episodesPerSeason: [10, 8, 8],
+  
 }
 ];
 

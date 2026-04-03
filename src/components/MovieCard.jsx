@@ -1,10 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import { Star, Play } from "./icons/Icons";
 import { PLACEHOLDER } from "../data/moviesData";
 
-export default function MovieCard({ movie, onOpenDetail }) {
+export default function MovieCard({ movie }) {
+  const navigate = useNavigate();
+  const slugify = (text) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
   return (
     <div
-      onClick={() => onOpenDetail(movie.id)}
+      onClick={() => navigate(`/${slugify(movie.title)}-${movie.id}`)}
       className="group relative rounded-xl overflow-hidden cursor-pointer"
       style={{ aspectRatio: "2/3" }}
     >

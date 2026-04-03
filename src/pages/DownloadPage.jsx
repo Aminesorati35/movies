@@ -1,12 +1,24 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Smartphone, Apple } from "lucide-react";
+import DownloadLocker from "../components/DownloadLocker";
 
-export default function DownloadPage({ onBackHome, onSelectPlatform }) {
+export default function DownloadPage() {
+  const navigate = useNavigate();
+  const [showDownloadLocker, setShowDownloadLocker] = useState(false);
+  const [platform, setPlatform] = useState("");
+
+  const handleSelectPlatform = (selectedPlatform) => {
+    setPlatform(selectedPlatform);
+    setShowDownloadLocker(true);
+  };
+
   return (
-    <div className="min-h-screen bg-[#050510] text-white">
+    <div className="min-h-screen bg-[#050510] text-white relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
         <button
-          onClick={onBackHome}
-          className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8  cursor-pointer"
+          onClick={() => navigate("/")}
+          className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8 cursor-pointer"
         >
           <ArrowLeft size={18} />
           Back to Home
@@ -29,7 +41,7 @@ export default function DownloadPage({ onBackHome, onSelectPlatform }) {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-                onClick={() => onSelectPlatform("android")}
+                onClick={() => handleSelectPlatform("android")}
                 className="group flex items-center justify-center gap-3 bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-4 rounded-2xl transition-all hover:scale-[1.02] shadow-lg cursor-pointer"
               >
                 <Smartphone size={20} />
@@ -37,7 +49,7 @@ export default function DownloadPage({ onBackHome, onSelectPlatform }) {
               </button>
 
               <button
-                onClick={() => onSelectPlatform("ios")}
+                onClick={() => handleSelectPlatform("ios")}
                 className="group flex items-center justify-center gap-3 bg-white/10 hover:bg-white/15 text-white font-bold px-6 py-4 rounded-2xl border border-white/10 transition-all hover:scale-[1.02] cursor-pointer"
               >
                 <Apple size={20} />
@@ -62,6 +74,13 @@ export default function DownloadPage({ onBackHome, onSelectPlatform }) {
           </div>
         </div>
       </div>
+
+      {showDownloadLocker && (
+        <DownloadLocker
+          platform={platform}
+          onClose={() => setShowDownloadLocker(false)}
+        />
+      )}
     </div>
   );
 }
