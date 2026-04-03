@@ -1,32 +1,5 @@
 export const allContent = [
-  {
-  id: 15,
-  title: "Super Mario Galaxy 2026",
-  poster: "https://www.critikat.com/wp-content/uploads/2026/03/Super-Mario-Galaxy-le-film-affiche.jpg",
-  backdrop: "https://universalpictures.ca/wp-content/uploads/2025/11/Universal_HomeMainCarousel_1920x1025-1.jpg",
-  rating: "8.9",
-  year: "2026",
-  duration: "1h 50m",
-  quality: "HD",
-  type: "movie",
-  genres: ["Adventure", "Family", "Fantasy", "Animation"],
-  description:
-    "Mario embarks on a new cosmic adventure across the galaxy to rescue Princess Peach from Bowser. Traveling between planets, he discovers new powers and allies while facing dangerous enemies in a visually stunning space journey.",
-},
-  {
-  id: 14,
-  title: "Your Heart Will Be Broken",
-  poster: "https://image.tmdb.org/t/p/original/7wIBfBl2gejt6xHxNSK0reVIm7E.jpg",
-  backdrop: "https://image.tmdb.org/t/p/original/1x9e0qWonw634NhIsRdvnneeqvN.jpg",
-  rating: "8.1",
-  year: "2026",
-  duration: "2h 14m",
-  quality: "HD",
-  type: "movie",
-  genres: ["Drama", "Romance"],
-  description:
-    "High school student Polina is saved from bullying at her new school and makes a deal with the main bully, Bars. He pretends to be her boyfriend and protects her, while she agrees to follow his rules. But as their fake relationship grows, real feelings begin to appear.",
-},
+ 
   {
     id: 1,
     title: "Godzilla x Kong",
@@ -228,6 +201,66 @@ export const allContent = [
     description:
       "A reimagining of Mary Shelley's classic tale about a scientist who creates a sapient creature.",
   },
+    {
+  id: 14,
+  title: "Your Heart Will Be Broken",
+  poster: "https://image.tmdb.org/t/p/original/7wIBfBl2gejt6xHxNSK0reVIm7E.jpg",
+  backdrop: "https://image.tmdb.org/t/p/original/1x9e0qWonw634NhIsRdvnneeqvN.jpg",
+  rating: "8.1",
+  year: "2026",
+  duration: "2h 14m",
+  quality: "HD",
+  type: "movie",
+  genres: ["Drama", "Romance"],
+  description:
+    "High school student Polina is saved from bullying at her new school and makes a deal with the main bully, Bars. He pretends to be her boyfriend and protects her, while she agrees to follow his rules. But as their fake relationship grows, real feelings begin to appear.",
+},
+  {
+  id: 15,
+  title: "Super Mario Galaxy 2026",
+  poster: "https://www.critikat.com/wp-content/uploads/2026/03/Super-Mario-Galaxy-le-film-affiche.jpg",
+  backdrop: "https://universalpictures.ca/wp-content/uploads/2025/11/Universal_HomeMainCarousel_1920x1025-1.jpg",
+  rating: "8.9",
+  year: "2026",
+  duration: "1h 50m",
+  quality: "HD",
+  type: "movie",
+  genres: ["Adventure", "Family", "Fantasy", "Animation"],
+  description:
+    "Mario embarks on a new cosmic adventure across the galaxy to rescue Princess Peach from Bowser. Traveling between planets, he discovers new powers and allies while facing dangerous enemies in a visually stunning space journey.",
+},
+   {
+  id: 16,
+  title: "Detective Hole",
+  poster: "https://m.media-amazon.com/images/M/MV5BYjRiYzU2MjAtMGY2Yi00YzVkLTkzZGMtMGE1OGQ0MWQ3OWYwXkEyXkFqcGc@._V1_.jpg",
+  backdrop: "https://people.com/thmb/FzZ0DCMS_BoMrPO8ZSF_JrCaX9o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(1012x213:1014x215)/detective-hole-Santelmann-33026-d3760c2fdce645eeb4f976babfca29fb.jpg",
+  rating: "8.6",
+  year: "2026",
+  duration: "1 Season",
+  quality: "HD",
+  type: "tv",
+  genres: ["Crime", "Drama", "Thriller"],
+  description:
+    "A heatwave strikes Oslo as darkness creeps into the city. Inspector Harry Hole, drunk and recently dismissed from the police, is convinced that his colleague Tom Waaler has committed murder. When another woman is found dead with a missing finger, Hole is drawn into a disturbing investigation that blurs the line between truth and obsession.",
+  seasons: 1,
+  episodesPerSeason: [8],
+},
+{
+  id: 17,
+  title: "XO, Kitty",
+  poster: "https://m.media-amazon.com/images/M/MV5BNGNlYTVmNTktM2NkNi00ZGQyLWEwZTYtYjU4YzdiYjFiOWUwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+  backdrop: "https://m.media-amazon.com/images/M/MV5BNGNlYTVmNTktM2NkNi00ZGQyLWEwZTYtYjU4YzdiYjFiOWUwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+  rating: "8.1",
+  year: "2025",
+  duration: "3 Seasons",
+  quality: "HD",
+  type: "tv",
+  genres: ["Romance", "Drama", "Comedy"],
+  description:
+    "A new love story unfolds when teen matchmaker Kitty reunites with her long-distance boyfriend at the same boarding school attended by her late mother.",
+  seasons: 3,
+  episodesPerSeason: [10, 8, 8],
+}
 ];
 
 export const heroMovies = [
@@ -242,6 +275,20 @@ export const heroMovies = [
   genres: "Adventure · Family · Fantasy · Animation",
   description:
     "Mario embarks on a new cosmic adventure across the galaxy to rescue Princess Peach from Bowser. Traveling between planets, he discovers new powers and allies while facing dangerous enemies in a visually stunning space journey.",
+},
+  {
+  id: 16,
+  title: "Detective Hole",
+  backdrop: "https://people.com/thmb/FzZ0DCMS_BoMrPO8ZSF_JrCaX9o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(1012x213:1014x215)/detective-hole-Santelmann-33026-d3760c2fdce645eeb4f976babfca29fb.jpg",
+  rating: "8.6",
+  year: "2026",
+  duration: "1 Season",
+  quality: "HD",
+  type: "tv",
+  genres: "Crime · Drama · Thriller",
+  description:
+    "A heatwave strikes Oslo as darkness creeps into the city. Inspector Harry Hole, drunk and recently dismissed from the police, is convinced that his colleague Tom Waaler has committed murder. When another woman is found dead with a missing finger, Hole is drawn into a disturbing investigation that blurs the line between truth and obsession.",
+
 },
   {
   id: 14,
@@ -292,9 +339,9 @@ export const heroMovies = [
   },
 ];
 
-export const trendingMovies = allContent.filter((c) =>
-  [15,14,7, 12, 13, 8,].includes(c.id)
-);
+export const trendingMovies = [17, 15, 16, 14, 12, 13]
+  .map((id) => allContent.find((c) => c.id === id))
+  .filter(Boolean);
 
 export const newReleases = allContent.filter((c) =>
   [1, 2, 3, 6, 5, 4].includes(c.id)
