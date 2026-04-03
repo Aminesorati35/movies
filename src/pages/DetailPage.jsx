@@ -8,8 +8,9 @@ import Locker from "../components/Locker";
 import AccessPromptModal from "../components/AccessPromptModal";
 
 export default function DetailPage() {
-  const { id } = useParams();
+  const { slug } = useParams();
 
+  const id = Number(slug.split("-").pop());
 
   const navigate = useNavigate();
   const videoRef = useRef(null);

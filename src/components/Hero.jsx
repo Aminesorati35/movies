@@ -28,7 +28,7 @@ export default function Hero() {
 
   const handleClick = () => {
     const content = allContent.find((x) => x.id === m.id);
-    if (content) navigate(`/watch/${content.id}`)
+    if (content) navigate(`/${slugify(content.title)}-${content.id}`)
   };
 
   return (
