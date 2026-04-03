@@ -51,7 +51,7 @@ export default function SignUpModal({ onClose, onLocker }) {
 
         <div className="flex justify-center mb-5">
           <img
-            src="https://i.postimg.cc/8zFT9KCd/Picsart-25-12-30-01-10-09-699.png"
+            src="/logo.png"
             alt="logo"
             className="w-12 h-12 rounded-xl"
           />

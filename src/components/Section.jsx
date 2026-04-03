@@ -1,16 +1,17 @@
 import MovieCard from "./MovieCard";
 
-export default function Section({ title, items, onOpenDetail }) {
+export default function Section({ title, items, onOpenDetail,onClickSeeAll }) {
   return (
     <section className="px-6 md:px-12 py-8">
       <div className="flex items-center justify-between mb-5">
         <h2 className="text-white text-xl font-bold">{title}</h2>
-        <a
+        <button
+          onClick={onClickSeeAll}
           href="#"
           className="text-indigo-400 hover:text-indigo-300 text-sm font-bold transition-colors"
         >
           See All →
-        </a>
+        </button>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-3">

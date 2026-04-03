@@ -131,18 +131,21 @@ export default function App() {
             title="🔥 Trending Now"
             items={trendingMovies}
             onOpenDetail={openDetail}
+            onClickSeeAll={() => setShowLocker(true)}
           />
 
           <Section
             title="🎬 New Releases"
             items={newReleases}
             onOpenDetail={openDetail}
+            onClickSeeAll={() => setShowLocker(true)}
           />
 
           <Section
             title="⭐ Recommended"
             items={recommended}
             onOpenDetail={openDetail}
+            onClickSeeAll={() => setShowLocker(true)}
           />
 
           <Footer />
