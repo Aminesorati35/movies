@@ -26,7 +26,6 @@ export default function DetailPage() {
 
   const content = allContent.find((c) => c.id === Number(id));
 
-  const videoSrc = content.videoUrl || content.trailerUrl;
 useEffect(() => {
   const preventScroll = (e) => e.preventDefault();
 
@@ -69,6 +68,7 @@ useEffect(() => {
       </div>
     );
   }
+  const videoSrc = content.videoUrl || content.trailerUrl;
 
   const episodeCount =
     content.type === "tv" && content.episodesPerSeason
