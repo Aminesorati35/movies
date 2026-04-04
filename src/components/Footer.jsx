@@ -4,7 +4,11 @@ export default function Footer() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
         <div className="col-span-2 md:col-span-1">
           <div className="flex items-center gap-2 mb-3">
-            <img src="/logo.png" alt="logo" className="w-8 h-8 rounded-lg" />
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="w-8 h-8 rounded-lg"
+            />
             <span className="text-white font-black">Beflix</span>
           </div>
 
