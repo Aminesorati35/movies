@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
+import "./VideoPlayer.css";
 
 export default function VideoPlayer({
   src,
@@ -12,28 +13,13 @@ export default function VideoPlayer({
 }) {
   const containerRef = useRef(null);
   const playerRef = useRef(null);
-  const hasTriggeredGateRef = useRef(false);
-  const hasCalledReadyRef = useRef(false);
-  const gateCallbackRef = useRef(onReachGateTime);
-  const readyCallbackRef = useRef(onReady);
-
-  useEffect(() => {
-    gateCallbackRef.current = onReachGateTime;
-  }, [onReachGateTime]);
-
-  useEffect(() => {
-    readyCallbackRef.current = onReady;
-  }, [onReady]);
 
   useEffect(() => {
     if (!containerRef.current || !src) return;
 
-    hasTriggeredGateRef.current = false;
-    hasCalledReadyRef.current = false;
-
     if (!playerRef.current) {
       const videoElement = document.createElement("video-js");
-      videoElement.className = `video-js vjs-big-play-centered beflix-player ${className}`;
+      videoElement.className = `video-js beflix-player ${className}`;
 
       containerRef.current.innerHTML = "";
       containerRef.current.appendChild(videoElement);
@@ -43,68 +29,34 @@ export default function VideoPlayer({
         autoplay: true,
         preload: "auto",
         responsive: true,
-        fluid: true,
+        // ❌ مهم: ماكاينش fluid هنا
         poster: poster || "",
-        sources: [
-          {
-            src,
-            type: "video/mp4",
-          },
-        ],
-        controlBar: {
-          volumePanel: {
-            inline: true,
-          },
-        },
+        sources: [{ src, type: "video/mp4" }],
       }));
 
       player.on("loadeddata", () => {
-        if (!hasCalledReadyRef.current) {
-          hasCalledReadyRef.current = true;
-          readyCallbackRef.current?.();
-        }
-      });
-
-      player.on("canplay", () => {
-        if (!hasCalledReadyRef.current) {
-          hasCalledReadyRef.current = true;
-          readyCallbackRef.current?.();
-        }
+        onReady?.();
       });
 
       player.on("timeupdate", () => {
-        if (hasTriggeredGateRef.current) return;
-
         const currentTime = player.currentTime() || 0;
         if (currentTime >= gateTime) {
-          hasTriggeredGateRef.current = true;
           player.pause();
-          gateCallbackRef.current?.();
+          onReachGateTime?.();
         }
-      });
-
-      player.on("error", () => {
-        console.log("Video.js error:", player.error());
       });
     } else {
       const player = playerRef.current;
       player.poster(poster || "");
-      player.src([
-        {
-          src,
-          type: "video/mp4",
-        },
-      ]);
+      player.src([{ src, type: "video/mp4" }]);
       player.load();
-      player.play().catch((err) => {
-        console.log("play error:", err);
-      });
+      player.play().catch(() => {});
     }
-  }, [src, poster, gateTime, className]);
+  }, [src, poster, gateTime]);
 
   useEffect(() => {
     return () => {
-      if (playerRef.current && !playerRef.current.isDisposed()) {
+      if (playerRef.current) {
         playerRef.current.dispose();
         playerRef.current = null;
       }
@@ -112,9 +64,9 @@ export default function VideoPlayer({
   }, []);
 
   return (
-    <div className="w-full h-full overflow-hidden rounded-2xl bg-black flex justify-center items-center">
-      <div data-vjs-player className="w-full h-full ">
-        <div ref={containerRef} className="w-full h-full flex justify-center items-center" />
+    <div className="video-wrapper">
+      <div data-vjs-player className="video-inner">
+        <div ref={containerRef} className="video-container" />
       </div>
     </div>
   );
