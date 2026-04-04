@@ -112,9 +112,9 @@ export default function VideoPlayer({
   }, []);
 
   return (
-    <div className="w-full h-full overflow-hidden rounded-2xl bg-black">
-      <div data-vjs-player className="w-full h-full">
-        <div ref={containerRef} className="w-full h-full" />
+    <div className="w-full h-full overflow-hidden rounded-2xl bg-black flex justify-center items-center">
+      <div data-vjs-player className="w-full h-full ">
+        <div ref={containerRef} className="w-full h-full flex justify-center items-center" />
       </div>
     </div>
   );
