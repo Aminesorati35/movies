@@ -263,7 +263,22 @@ export const allContent = [
   seasons: 3,
   episodesPerSeason: [10, 8, 8],
   
-}
+},
+{
+  id: 18,
+  title: "The Drama",
+  poster: "https://image.tmdb.org/t/p/original/yPV87cvDabRMTZs6NIbZLOufBLR.jpg",
+  backdrop: "https://image.tmdb.org/t/p/original/yLjh1d3SlneSRVHz0ZrX1fuXSob.jpg",
+  rating: "7.8",
+  year: "2026",
+  duration: "1h 45min",
+  quality: "HD",
+  type: "movie",
+  genres: ["Drama", "Romance"],
+  description:
+    "A happily engaged couple is put to the ultimate test when an unexpected twist turns their wedding week into chaos. As emotions rise and secrets begin to surface, their love faces challenges that could either strengthen their bond or tear them apart forever.",
+  videoUrl: "https://oncima.com/fmovie/assets/video/Materialists.mp4",
+  },
 ];
 
 export const heroMovies = [
@@ -342,7 +357,7 @@ export const heroMovies = [
   },
 ];
 
-export const trendingMovies = [14,17,15,16,12,13]
+export const trendingMovies = [18,17,15,14,12,16]
   .map((id) => allContent.find((c) => c.id === id))
   .filter(Boolean);
 

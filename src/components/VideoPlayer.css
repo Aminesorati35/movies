@@ -78,3 +78,28 @@
 .beflix-player .vjs-big-play-button:hover {
   background: rgba(79,70,229,1) !important;
 }
+.beflix-player.vjs-fluid {
+  padding-top: 0 !important;
+  height: 100% !important;
+  max-height: 100%;
+}
+
+/* Keep the video element fitting within bounds without overflow */
+.beflix-player .vjs-tech {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Ensure control bar stays anchored at the bottom of the container, not below it */
+.beflix-player .vjs-control-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}

@@ -44,7 +44,7 @@ export default function VideoPlayer({
         autoplay: true,
         preload: "auto",
         responsive: true,
-        fluid: true,
+        fill: true,
         poster: poster || "",
         sources: [
           {
