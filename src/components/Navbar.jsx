@@ -21,8 +21,8 @@ export default function Navbar({ scrolled, onSignUp }) {
           alt="logo"
           className="w-9 h-9 rounded-xl object-contain"
         />
-        <span className="text-white font-black text-lg tracking-tight">
-          Beflix
+        <span className="text-white font-bold text-lg tracking-tight">
+          Beflix.online
         </span>
       </div>
 

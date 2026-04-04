@@ -281,81 +281,6 @@ export const allContent = [
   },
 ];
 
-export const heroMovies = [
-   {
-  id: 15,
-  title: "Super Mario Galaxy 2026",
-  backdrop: "https://universalpictures.ca/wp-content/uploads/2025/11/Universal_HomeMainCarousel_1920x1025-1.jpg",
-  rating: "8.9",
-  year: "2026",
-  duration: "1h 50m",
-  type: "movie",
-  genres: "Adventure · Family · Fantasy · Animation",
-  description:
-    "Mario embarks on a new cosmic adventure across the galaxy to rescue Princess Peach from Bowser. Traveling between planets, he discovers new powers and allies while facing dangerous enemies in a visually stunning space journey.",
-},
-  {
-  id: 16,
-  title: "Detective Hole",
-  backdrop: "https://people.com/thmb/FzZ0DCMS_BoMrPO8ZSF_JrCaX9o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(1012x213:1014x215)/detective-hole-Santelmann-33026-d3760c2fdce645eeb4f976babfca29fb.jpg",
-  rating: "8.6",
-  year: "2026",
-  duration: "1 Season",
-  quality: "HD",
-  type: "tv",
-  genres: "Crime · Drama · Thriller",
-  description:
-    "A heatwave strikes Oslo as darkness creeps into the city. Inspector Harry Hole, drunk and recently dismissed from the police, is convinced that his colleague Tom Waaler has committed murder. When another woman is found dead with a missing finger, Hole is drawn into a disturbing investigation that blurs the line between truth and obsession.",
-
-},
-  {
-  id: 14,
-  title: "Your Heart Will Be Broken",
-  backdrop: "https://image.tmdb.org/t/p/original/1x9e0qWonw634NhIsRdvnneeqvN.jpg",
-  rating: "8.1",
-  year: "2026",
-  duration: "2h 14m",
-  genres: "Drama · Romance",
-  description:
-    "High school student Polina is saved from bullying at her new school and makes a deal with the main bully, Bars. He pretends to be her boyfriend and protects her, while she agrees to follow his rules. But as their fake relationship grows, real feelings begin to appear.",
-},
-
-  {
-    id: 5,
-    title: "Oppenheimer",
-    rating: "8.4",
-    year: "2023",
-    duration: "3h 0m",
-    genres: "Biography · Drama · History",
-    description:
-      "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
-    backdrop:
-      "https://image.tmdb.org/t/p/original/nb3xI8XI3w4pMVZ38VijbsyBqP4.jpg",
-  },
-  {
-    id: 9,
-    title: "Attack On Titan",
-    rating: "9.1",
-    year: "2013",
-    duration: "4 Seasons",
-    genres: "Animation · Action · Drama",
-    description:
-      "After his hometown is destroyed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans.",
-    backdrop:
-      "https://i.postimg.cc/htTRJ2pf/Attack-On-Titan-Japanese-Anime-Poster.jpg",
-  },
-  {
-    id: 11,
-    title: "Naruto",
-    rating: "8.3",
-    year: "2002",
-    duration: "+500 episodes",
-    genres: "Action · Drama",
-    description:
-      "A young ninja who dreams of becoming Hokage and earning everyone's respect despite being rejected by his village.",
-    backdrop: "https://i.postimg.cc/BvzvpL5w/download-(3).jpg",
-  },
-];
 
 export const trendingMovies = [18,17,15,14,12,16]
   .map((id) => allContent.find((c) => c.id === id))
@@ -368,6 +293,101 @@ export const newReleases = allContent.filter((c) =>
 export const recommended = allContent.filter((c) =>
   [12, 9, 10, 7, 4, 5].includes(c.id)
 );
+export const heroMovies = [18,15, 16, 14, 5,9,11]
+  .map((id) => allContent.find((c) => c.id === id))
+  .filter(Boolean);
+
 
 export const PLACEHOLDER =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='300'%3E%3Crect fill='%231a1a2e' width='200' height='300'/%3E%3C/svg%3E";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // export const heroMovies = [
+//    {
+//   id: 15,
+//   title: "Super Mario Galaxy 2026",
+//   backdrop: "https://universalpictures.ca/wp-content/uploads/2025/11/Universal_HomeMainCarousel_1920x1025-1.jpg",
+//   rating: "8.9",
+//   year: "2026",
+//   duration: "1h 50m",
+//   type: "movie",
+//   genres: "Adventure · Family · Fantasy · Animation",
+//   description:
+//     "Mario embarks on a new cosmic adventure across the galaxy to rescue Princess Peach from Bowser. Traveling between planets, he discovers new powers and allies while facing dangerous enemies in a visually stunning space journey.",
+// },
+//   {
+//   id: 16,
+//   title: "Detective Hole",
+//   backdrop: "https://people.com/thmb/FzZ0DCMS_BoMrPO8ZSF_JrCaX9o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(1012x213:1014x215)/detective-hole-Santelmann-33026-d3760c2fdce645eeb4f976babfca29fb.jpg",
+//   rating: "8.6",
+//   year: "2026",
+//   duration: "1 Season",
+//   quality: "HD",
+//   type: "tv",
+//   genres: "Crime · Drama · Thriller",
+//   description:
+//     "A heatwave strikes Oslo as darkness creeps into the city. Inspector Harry Hole, drunk and recently dismissed from the police, is convinced that his colleague Tom Waaler has committed murder. When another woman is found dead with a missing finger, Hole is drawn into a disturbing investigation that blurs the line between truth and obsession.",
+
+// },
+//   {
+//   id: 14,
+//   title: "Your Heart Will Be Broken",
+//   backdrop: "https://image.tmdb.org/t/p/original/1x9e0qWonw634NhIsRdvnneeqvN.jpg",
+//   rating: "8.1",
+//   year: "2026",
+//   duration: "2h 14m",
+//   genres: "Drama · Romance",
+//   description:
+//     "High school student Polina is saved from bullying at her new school and makes a deal with the main bully, Bars. He pretends to be her boyfriend and protects her, while she agrees to follow his rules. But as their fake relationship grows, real feelings begin to appear.",
+// },
+
+//   {
+//     id: 5,
+//     title: "Oppenheimer",
+//     rating: "8.4",
+//     year: "2023",
+//     duration: "3h 0m",
+//     genres: "Biography · Drama · History",
+//     description:
+//       "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+//     backdrop:
+//       "https://image.tmdb.org/t/p/original/nb3xI8XI3w4pMVZ38VijbsyBqP4.jpg",
+//   },
+//   {
+//     id: 9,
+//     title: "Attack On Titan",
+//     rating: "9.1",
+//     year: "2013",
+//     duration: "4 Seasons",
+//     genres: "Animation · Action · Drama",
+//     description:
+//       "After his hometown is destroyed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans.",
+//     backdrop:
+//       "https://i.postimg.cc/htTRJ2pf/Attack-On-Titan-Japanese-Anime-Poster.jpg",
+//   },
+//   {
+//     id: 11,
+//     title: "Naruto",
+//     rating: "8.3",
+//     year: "2002",
+//     duration: "+500 episodes",
+//     genres: "Action · Drama",
+//     description:
+//       "A young ninja who dreams of becoming Hokage and earning everyone's respect despite being rejected by his village.",
+//     backdrop: "https://i.postimg.cc/BvzvpL5w/download-(3).jpg",
+//   },
+// ];

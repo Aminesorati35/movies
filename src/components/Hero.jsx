@@ -44,7 +44,7 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to right, #050510 38%, rgba(5,5,16,0.5) 65%, transparent)",
+            "linear-gradient(to right, #050510 10%, rgba(5,5,16,0.5) 65%, transparent)",
         }}
       />
       <div
@@ -72,7 +72,7 @@ export default function Hero() {
           </span>
           <span className="text-white/25">·</span>
           <span className="text-white/50">
-            {m.year} · {m.duration} · {m.genres}
+            {m.year} · {m.duration} · {m.genres?.slice(0, 2).join(" · ")}
           </span>
         </div>
 
