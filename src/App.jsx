@@ -95,6 +95,7 @@ export default function App() {
   // 👉 NORMAL WEBSITE
   return (
     <div className="min-h-screen bg-[#050510] relative">
+      <Navbar/>
       {page === "detail" && detail ? (
         <DetailPage
           content={detail}

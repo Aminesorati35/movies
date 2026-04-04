@@ -2,6 +2,7 @@ import { useState } from "react";
 import { allContent, PLACEHOLDER } from "../data/moviesData";
 import { Back, Play, Star } from "./icons/Icons";
 import MovieCard from "./MovieCard";
+import Navbar from "./Navbar";
 
 export default function DetailPage({ content, onBack, onPlay, onOpenDetail }) {
   const [season, setSeason] = useState(1);
@@ -23,7 +24,7 @@ export default function DetailPage({ content, onBack, onPlay, onOpenDetail }) {
     <div className="min-h-screen bg-[#050510]">
       <button
         onClick={onBack}
-        className="fixed top-5 left-5 z-50 w-11 h-11 rounded-full bg-black/60 backdrop-blur border border-white/10 flex items-center justify-center text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all"
+        className="fixed top-20 left-10 z-50 w-11 h-11 rounded-full bg-black/60 backdrop-blur border border-white/10 flex items-center justify-center text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all"
       >
         <Back />
       </button>
