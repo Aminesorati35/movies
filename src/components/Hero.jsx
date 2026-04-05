@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
 import { allContent, heroMovies } from "../data/moviesData";
 import { Play, Star } from "./icons/Icons";
+import { useNavigate } from 'react-router-dom';
 
 export default function Hero({ onOpenDetail }) {
+ const navigate = useNavigate()
   const [idx, setIdx] = useState(0);
   const [vis, setVis] = useState(true);
   const m = heroMovies[idx];
+  const slugify = (text) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -20,8 +27,7 @@ export default function Hero({ onOpenDetail }) {
   }, []);
 
   const handleClick = () => {
-    const content = allContent.find((x) => x.id === m.id);
-    if (content) onOpenDetail(content);
+    navigate(`/${slugify(m.title)}-${m.id}`)
   };
 
   return (
