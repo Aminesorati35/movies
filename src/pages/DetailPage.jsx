@@ -7,6 +7,7 @@ import MovieCard from "../components/MovieCard";
 import Locker from "../components/Locker";
 import AccessPromptModal from "../components/AccessPromptModal";
 import TutorialModal from "../components/TutorialModal";
+import BackButton from "../components/BackButton";
 
 export default function DetailPage() {
   const { slug } = useParams();
@@ -52,12 +53,7 @@ export default function DetailPage() {
   return (
     <div className="min-h-screen bg-[#050510]">
       {/* BACK BUTTON */}
-      <button
-        onClick={() => navigate("/")}
-        className="fixed top-20 left-10 z-50 w-11 h-11 rounded-full bg-black/60 backdrop-blur border border-white/10 flex items-center justify-center text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all"
-      >
-        <Back />
-      </button>
+       <BackButton/>
 
       {/* HERO */}
       <div className="relative h-[62vh] min-h-[380px]">

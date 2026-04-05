@@ -5,6 +5,7 @@ import {
   recommended,
   animes,
 } from "../data/moviesData";
+import { useNavigate } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
@@ -14,6 +15,7 @@ import SignUpModal from "../components/SignUpModal";
 import Locker from "../components/Locker";
 
 export default function Home() {
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
   const [showLocker, setShowLocker] = useState(false);
@@ -26,17 +28,33 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#050510] relative">
-      <Navbar
-        scrolled={scrolled}
-        onSignUp={() => setShowSignUp(true)}
-      />
+      <Navbar scrolled={scrolled} onSignUp={() => setShowSignUp(true)} />
 
       <Hero />
 
-      <Section title="🔥 Trending Now" items={trendingMovies} onClickSeeAll={()=>setShowLocker(true)} />
-      <Section title="🎬 New Releases" items={newReleases} onClickSeeAll={()=>setShowLocker(true)}  />
-      <Section title="⭐ Recommended" items={recommended} onClickSeeAll={()=>setShowLocker(true)}  />
-      <Section title="Animes Recommended" items={animes} onClickSeeAll={()=>setShowLocker(true)}  />
+      <Section
+        title="🔥 Trending Now"
+        items={trendingMovies}
+        onClickSeeAll={() => navigate("/category/trending")}
+      />
+
+      <Section
+        title="🎬 New Releases"
+        items={newReleases}
+        onClickSeeAll={() => navigate("/category/new")}
+      />
+
+      <Section
+        title="⭐ Recommended"
+        items={recommended}
+        onClickSeeAll={() => navigate("/category/recommended")}
+      />
+
+      <Section
+        title="Animes Recommended"
+        items={animes.slice(0, 6)}
+        onClickSeeAll={() => navigate("/category/anime")}
+      />
 
       <Footer />
 

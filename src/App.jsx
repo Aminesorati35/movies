@@ -5,6 +5,7 @@ import DetailPage from "./pages/DetailPage";
 import DownloadPage from "./pages/DownloadPage";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
+import AllPage from "./pages/AllPage";
 
 export default function App() {
   const [isTikTokBrowser, setIsTikTokBrowser] = useState(null);
@@ -43,6 +44,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/download" element={<DownloadPage />} />
         <Route path="/:slug" element={<DetailPage />} />
+        <Route path="/category/:type" element={<AllPage />} />
 </Routes>
 
 

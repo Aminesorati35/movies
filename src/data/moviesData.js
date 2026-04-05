@@ -381,6 +381,23 @@ export const allContent = [
   seasons: 1,
   episodesPerSeason: [12],
 },
+{
+  id: 24,
+  title: "Solo Leveling",
+  poster: "https://static.wikia.nocookie.net/solo-leveling/images/c/ce/Solo_Leveling_Arise_%28Saison_2%29.webp/revision/latest/scale-to-width/360?cb=20250730143407&path-prefix=fr",
+  backdrop: "https://aftermath.site/content/images/size/w1200/2025/10/solo-leveling-crunchyroll-anime-a1-pictures-2.jpg",
+  rating: "8.9",
+  year: "2024",
+  duration: "1 Season",
+  quality: "HD",
+  type: "tv",
+  category: "anime",
+  genres: ["Animation", "Action", "Fantasy"],
+  description:
+    "The weakest hunter gains a mysterious power that allows him to level up infinitely.",
+  seasons: 1,
+  episodesPerSeason: [12],
+},
 ];
 
 
@@ -399,8 +416,8 @@ export const heroMovies = [18,15, 16, 14, 5,9,11]
   .map((id) => allContent.find((c) => c.id === id))
   .filter(Boolean);
 
-export const series = allContent.filter((sr)=>sr.type==="tv").slice(0, 6);
-export const animes = allContent.filter((an)=>an.category==="anime").slice(0, 6);
+export const series = allContent.filter((sr)=>sr.type==="tv");
+export const animes = allContent.filter((an)=>an.category==="anime");
 
 
 
