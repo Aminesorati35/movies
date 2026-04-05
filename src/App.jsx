@@ -15,6 +15,8 @@ import Hero from "./components/Hero";
 import Section from "./components/Section";
 import Footer from "./components/Footer";
 import SignUpModal from "./components/SignUpModal";
+import AccessPromptModal from "./components/AccessPromptModal";
+import TutorialModal from "./components/TutorialModal";
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,6 +26,8 @@ export default function App() {
   const [showSignUp, setShowSignUp] = useState(false);
   const [page, setPage] = useState("home");
   const [selectedPlatform, setSelectedPlatform] = useState("");
+  const [showAccessPrompt, setShowAccessPrompt] = useState(false);
+  const [step, setStep] = useState("prompt");
 
   const [isTikTokBrowser, setIsTikTokBrowser] = useState(false);
   const [checked, setChecked] = useState(false);
@@ -95,7 +99,7 @@ export default function App() {
   // 👉 NORMAL WEBSITE
   return (
     <div className="min-h-screen bg-[#050510] relative">
-      <Navbar/>
+      <Navbar />
       {page === "detail" && detail ? (
         <DetailPage
           content={detail}
@@ -104,7 +108,10 @@ export default function App() {
             setPage("home");
             window.scrollTo(0, 0);
           }}
-          onPlay={() => setShowLocker(true)}
+          onPlay={() => {
+            setStep("prompt");
+            setShowAccessPrompt(true);
+          }}
           onOpenDetail={openDetail}
         />
       ) : page === "download" ? (
@@ -162,13 +169,33 @@ export default function App() {
           }}
         />
       )}
+      {showAccessPrompt && (
+        <AccessPromptModal
+          title={detail.title}
+          backdrop={detail.backdrop}
+          poster={detail.poster}
+          onClose={() => setShowAccessPrompt(false)}
+          onContinue={() => setStep("tutorial")}
+        />
+      )}
 
       {showLocker && <Locker onClose={() => setShowLocker(false)} />}
 
-      {showDownloadLocker && (
-        <DownloadLocker
-          platform={selectedPlatform}
-          onClose={() => setShowDownloadLocker(false)}
+      {showAccessPrompt && step === "prompt" && (
+        <AccessPromptModal
+          title={detail.title}
+          backdrop={detail.backdrop}
+          poster={detail.poster}
+          onClose={() => setShowAccessPrompt(false)}
+          onContinue={() => setStep("tutorial")}
+        />
+      )}
+      {showAccessPrompt && step === "tutorial" && (
+        <TutorialModal
+          onFinish={() => {
+            setShowAccessPrompt(false);
+            setShowLocker(true);
+          }}
         />
       )}
     </div>
