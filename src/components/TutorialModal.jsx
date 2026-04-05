@@ -5,15 +5,8 @@ export default function TutorialModal({ onFinish }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showControls, setShowControls] = useState(false);
   const videoRef = useRef(null);
-
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
-      // Small delay so the play button fades out before controls appear
-      setTimeout(() => setShowControls(true), 400);
-    }
-  };
+  const TUTORIAL_EMBED_SRC =
+  "https://player.cloudinary.com/embed/?cloud_name=dendxflaj&public_id=howto_vsrl2l";
 
   return (
     <AnimatePresence>
@@ -32,51 +25,14 @@ export default function TutorialModal({ onFinish }) {
         >
           {/* VIDEO */}
           <div className="w-full flex-1 bg-black relative" style={{ minHeight: 0 }}>
-            <video
-              ref={videoRef}
-              src="/videos/howto.mp4"
-              controls={showControls}
-              className="w-full h-full object-cover"
-              onEnded={() => {
-                setIsPlaying(false);
-                setShowControls(false);
-              }}
-            />
-
-            {/* Centered Play Button Overlay */}
-            <AnimatePresence>
-              {!isPlaying && (
-                <motion.button
-                  onClick={handlePlay}
-                  className="absolute inset-0 flex items-center justify-center group"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.3 }}
-                  aria-label="Play video"
-                >
-                  {/* Dark overlay behind button */}
-                  <div className="absolute inset-0 bg-black/30" />
-
-                  {/* Play button circle */}
-                  <motion.div
-                    className="relative z-10 w-20 h-20 rounded-full bg-amber-400/90 flex items-center justify-center shadow-2xl border-2 border-white/30"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {/* Play triangle */}
-                    <svg
-                      className="w-8 h-8 text-white ml-1"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </motion.div>
-                </motion.button>
-              )}
-            </AnimatePresence>
+            <iframe
+              title="Tutorial video"
+              src={TUTORIAL_EMBED_SRC}
+              className="absolute inset-0 w-full h-full"
+              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+              allowFullScreen
+              style={{ border: 0 }}
+            />            
           </div>
 
           {/* TEXT */}
