@@ -6,7 +6,7 @@ export default function TutorialModal({ onFinish }) {
   const [showControls, setShowControls] = useState(false);
   const videoRef = useRef(null);
   const TUTORIAL_EMBED_SRC =
-  "https://player.cloudinary.com/embed/?cloud_name=dendxflaj&public_id=0404_yehrq2p";
+  "https://player.cloudinary.com/embed/?cloud_name=dendxflaj&public_id=0404_yehrq2";
 
   return (
     <AnimatePresence>
