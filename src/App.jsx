@@ -150,7 +150,12 @@ export default function App() {
             onOpenDetail={openDetail}
             onClickSeeAll={() => setShowLocker(true)}
           />
-
+          <Section
+            title="Anime"
+            items={animes}
+            onOpenDetail={openDetail}
+            onClickSeeAll={() => setShowLocker(true)}
+          />
           <Section
             title="⭐ Recommended"
             items={recommended}
@@ -163,12 +168,7 @@ export default function App() {
             onOpenDetail={openDetail}
             onClickSeeAll={() => setShowLocker(true)}
           />
-          <Section
-            title="Anime"
-            items={animes}
-            onOpenDetail={openDetail}
-            onClickSeeAll={() => setShowLocker(true)}
-          />
+          
 
           <Footer />
         </>
