@@ -87,7 +87,7 @@ export default function TutorialModal({ onFinish }) {
 
             <button
               onClick={onFinish}
-              className="w-full bg-[#b7a507] hover:bg-[#c7b50c] text-white py-3 rounded-lg font-semibold"
+              className="w-full bg-[#b7a507] hover:bg-[#c7b50c] text-white py-3 rounded-lg font-semibold cursor-pointer"
             >
               Continue ➞
             </button>

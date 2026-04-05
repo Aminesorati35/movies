@@ -50,11 +50,7 @@ export default function SignUpModal({ onClose, onLocker }) {
         </button>
 
         <div className="flex justify-center mb-5">
-          <img
-            src="/logo.png"
-            alt="logo"
-            className="w-12 h-12 rounded-xl"
-          />
+          <img src="/logo.png" alt="logo" className="w-12 h-12 rounded-xl" />
         </div>
 
         <h2 className="text-center text-white text-xl font-black mb-1">
@@ -89,7 +85,7 @@ export default function SignUpModal({ onClose, onLocker }) {
 
         <button
           onClick={submit}
-          className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-xl text-sm transition-colors"
+          className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-xl text-sm transition-colors cursor-pointer"
         >
           Sign Up
         </button>

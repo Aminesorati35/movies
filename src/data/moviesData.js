@@ -214,7 +214,7 @@ export const allContent = [
   genres: ["Drama", "Romance"],
   description:
     "High school student Polina is saved from bullying at her new school and makes a deal with the main bully, Bars. He pretends to be her boyfriend and protects her, while she agrees to follow his rules. But as their fake relationship grows, real feelings begin to appear.",
-    videoUrl:"https://oncima.com/fmovie/assets/video/Your%20Heart%20Will%20Be%20Broken.mp4",
+    //videoUrl:"https://oncima.com/fmovie/assets/video/Your%20Heart%20Will%20Be%20Broken.mp4",
 },
   {
   id: 15,
@@ -229,7 +229,7 @@ export const allContent = [
   genres: ["Adventure", "Family", "Fantasy", "Animation"],
   description:
     "Mario embarks on a new cosmic adventure across the galaxy to rescue Princess Peach from Bowser. Traveling between planets, he discovers new powers and allies while facing dangerous enemies in a visually stunning space journey.",
-    videoUrl: "https://moviqa.com/Universal.mp4",
+    //videoUrl: "https://moviqa.com/Universal.mp4",
 },
    {
   id: 16,
@@ -277,7 +277,7 @@ export const allContent = [
   genres: ["Drama", "Romance"],
   description:
     "A happily engaged couple is put to the ultimate test when an unexpected twist turns their wedding week into chaos. As emotions rise and secrets begin to surface, their love faces challenges that could either strengthen their bond or tear them apart forever.",
-  videoUrl: "https://oncima.com/fmovie/assets/video/Materialists.mp4",
+  //videoUrl: "https://oncima.com/fmovie/assets/video/Materialists.mp4",
   },
   {
   id: 19,
@@ -367,7 +367,7 @@ export const allContent = [
 {
   id: 24,
   title: "Solo Leveling",
-  poster: "https://m.media-amazon.com/images/M/MV5BM2M4YzdkMTEtMjUyYy00ZWY0LWI5ODQtNGRkZWQ1MzU5MWM2XkEyXkFqcGc@._V1_.jpg",
+  poster: "https://static.wikia.nocookie.net/solo-leveling/images/c/ce/Solo_Leveling_Arise_%28Saison_2%29.webp/revision/latest/scale-to-width/360?cb=20250730143407&path-prefix=fr",
   backdrop: "https://aftermath.site/content/images/size/w1200/2025/10/solo-leveling-crunchyroll-anime-a1-pictures-2.jpg",
   rating: "8.9",
   year: "2024",
