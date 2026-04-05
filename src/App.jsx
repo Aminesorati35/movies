@@ -4,6 +4,8 @@ import {
   newReleases,
   recommended,
   allContent,
+  series,
+  animes,
 } from "./data/moviesData";
 
 import Locker from "./components/Locker";
@@ -152,6 +154,18 @@ export default function App() {
           <Section
             title="⭐ Recommended"
             items={recommended}
+            onOpenDetail={openDetail}
+            onClickSeeAll={() => setShowLocker(true)}
+          />
+          <Section
+            title="Series"
+            items={series}
+            onOpenDetail={openDetail}
+            onClickSeeAll={() => setShowLocker(true)}
+          />
+          <Section
+            title="Anime"
+            items={animes}
             onOpenDetail={openDetail}
             onClickSeeAll={() => setShowLocker(true)}
           />

@@ -279,6 +279,108 @@ export const allContent = [
     "A happily engaged couple is put to the ultimate test when an unexpected twist turns their wedding week into chaos. As emotions rise and secrets begin to surface, their love faces challenges that could either strengthen their bond or tear them apart forever.",
   videoUrl: "https://oncima.com/fmovie/assets/video/Materialists.mp4",
   },
+  {
+  id: 19,
+  title: "Demon Slayer",
+  poster: "https://www.cineanimation.fr/sites/default/files/styles/400xauto/public/2025-07/Demon%20Slayer%20Kimetsu%20no%20Yaiba%20La%20Forteresse%20Infinie%20Film%201.jpeg?itok=TEpEBTa4",
+  backdrop: "https://a.storyblok.com/f/178900/960x540/6e6bcda041/demon-slayer.jpg/m/filters:quality(95)format(webp)",
+  rating: "8.7",
+  year: "2019",
+  duration: "3 Seasons",
+  quality: "HD",
+  type: "tv",
+  category: "anime",
+  genres: ["Animation", "Action", "Fantasy"],
+  description:
+    "Tanjiro sets out on a journey to save his sister and avenge his family after demons slaughter them.",
+  seasons: 3,
+  episodesPerSeason: [26, 18, 11],
+},
+{
+  id: 20,
+  title: "Jujutsu Kaisen",
+  poster: "https://m.media-amazon.com/images/M/MV5BMjBlNTExMDAtMWZjZi00MDc5LWFkMjgtZDU0ZWQ5ODk3YWY5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+  backdrop: "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GRDV0019R-backdrop_wide",
+  rating: "8.8",
+  year: "2020",
+  duration: "2 Seasons",
+  quality: "HD",
+  type: "tv",
+  category: "anime",
+  genres: ["Animation", "Action", "Supernatural"],
+  description:
+    "Yuji Itadori joins a secret organization of Jujutsu Sorcerers to eliminate cursed spirits.",
+  seasons: 2,
+  episodesPerSeason: [24, 23],
+},
+{
+  id: 21,
+  title: "Death Note",
+  poster: "https://bdi.dlpdomain.com/serie/visuel/BDA_20069/1-M480x680.jpg",
+  backdrop: "https://m.media-amazon.com/images/S/pv-target-images/2ea14b7aa1b5a1d5a4a1e2cd15cc1c10d205715e92bb00c6983b1a00f317c450._BR-6_AC_SX720_FMjpg_.jpg",
+  rating: "9.0",
+  year: "2006",
+  duration: "1 Season",
+  quality: "HD",
+  type: "tv",
+  category: "anime",
+  genres: ["Animation", "Mystery", "Thriller"],
+  description:
+    "A genius student discovers a notebook that lets him kill anyone by writing their name.",
+  seasons: 1,
+  episodesPerSeason: [37],
+},
+{
+  id: 22,
+  title: "Tokyo Revengers",
+  poster: "https://m.media-amazon.com/images/M/MV5BNGYzMjBhMTMtM2Q4YS00OGMyLTk2ZWItYTg3MDk2YWIxNmVkXkEyXkFqcGc@._V1_.jpg",
+  backdrop: "https://www.fredzone.org/wp-content/uploads/2022/02/tokyo-revengers-season-2.jpg",
+  rating: "8.2",
+  year: "2021",
+  duration: "2 Seasons",
+  quality: "HD",
+  type: "tv",
+  category: "anime",
+  genres: ["Animation", "Action", "Drama"],
+  description:
+    "A man travels back in time to save his ex-girlfriend and change his tragic future.",
+  seasons: 2,
+  episodesPerSeason: [24, 13],
+},
+{
+  id: 23,
+  title: "Chainsaw Man",
+  poster: "https://m.media-amazon.com/images/M/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+  backdrop: "https://www.fredzone.org/wp-content/uploads/2022/09/chainsaw-man-anime.jpg",
+  rating: "8.6",
+  year: "2022",
+  duration: "1 Season",
+  quality: "HD",
+  type: "tv",
+  category: "anime",
+  genres: ["Animation", "Action", "Horror"],
+  description:
+    "Denji becomes Chainsaw Man after merging with his pet devil to hunt demons.",
+  seasons: 1,
+  episodesPerSeason: [12],
+},
+{
+  id: 24,
+  title: "Solo Leveling",
+  poster: "https://m.media-amazon.com/images/M/MV5BM2M4YzdkMTEtMjUyYy00ZWY0LWI5ODQtNGRkZWQ1MzU5MWM2XkEyXkFqcGc@._V1_.jpg",
+  backdrop: "https://aftermath.site/content/images/size/w1200/2025/10/solo-leveling-crunchyroll-anime-a1-pictures-2.jpg",
+  rating: "8.9",
+  year: "2024",
+  duration: "1 Season",
+  quality: "HD",
+  type: "tv",
+  category: "anime",
+  genres: ["Animation", "Action", "Fantasy"],
+  description:
+    "The weakest hunter gains a mysterious power that allows him to level up infinitely.",
+  seasons: 1,
+  episodesPerSeason: [12],
+},
 ];
 
 
@@ -296,6 +398,10 @@ export const recommended = allContent.filter((c) =>
 export const heroMovies = [18,15, 16, 14, 5,9,11]
   .map((id) => allContent.find((c) => c.id === id))
   .filter(Boolean);
+
+export const series = allContent.filter((sr)=>sr.type==="tv").slice(0, 6);
+export const animes = allContent.filter((an)=>an.category==="anime").slice(0, 6);
+
 
 
 export const PLACEHOLDER =

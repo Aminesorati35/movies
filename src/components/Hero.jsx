@@ -37,7 +37,7 @@ export default function Hero({ onOpenDetail }) {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to right, #050510 38%, rgba(5,5,16,0.5) 65%, transparent)",
+            "linear-gradient(to right, #050510 2%, rgba(5,5,16,0.5) 65%, transparent)",
         }}
       />
       <div

@@ -13,12 +13,13 @@ export default function DetailPage({ content, onBack, onPlay, onOpenDetail }) {
       : 0;
 
   const similar = allContent
-    .filter(
-      (c) =>
-        c.id !== content.id &&
-        c.genres?.some((g) => content.genres?.includes(g))
-    )
-    .slice(0, 6);
+  .filter(
+    (c) =>
+      c.id !== content.id &&
+      c.type === content.type &&
+      c.genres?.some((g) => content.genres?.includes(g))
+  )
+  .slice(0, 6);
 
   return (
     <div className="min-h-screen bg-[#050510]">
