@@ -18,8 +18,8 @@ export const allContent = [
   {
     id: 2,
     title: "Kung Fu Panda 4",
-    poster: "https://i.postimg.cc/9Q6YYGGT/download.jpg",
-    backdrop: "https://i.postimg.cc/9Q6YYGGT/download.jpg",
+    poster: "https://www.cinehorizons.net/sites/default/files/affiches/716535181-kung-fu-panda-4.jpg",
+    backdrop: "https://www.radiofrance.fr/pikapi/images/ef38a37e-0bcd-467d-94ea-1695cc8ca074/1200x680?webp=false",
     rating: "7.0",
     year: "2024",
     duration: "1h 34m",
@@ -33,9 +33,9 @@ export const allContent = [
     id: 3,
     title: "Ghostbusters: Frozen Empire",
     poster:
-      "https://i.postimg.cc/sDSYDBFR/Ghostbusters-Frozen-Empire-(2024).jpg",
+      "https://m.media-amazon.com/images/M/MV5BOWI5NGUyMzUtMGFiNi00ZTc3LTk1YTQtMDU0NGRjNGIxZTZmXkEyXkFqcGc@._V1_.jpg",
     backdrop:
-      "https://i.postimg.cc/sDSYDBFR/Ghostbusters-Frozen-Empire-(2024).jpg",
+      "https://m.media-amazon.com/images/M/MV5BNGIxN2ExZTYtNGMxMC00YTc2LTgzMWQtOWEwZWU3NjBjMjBmXkEyXkFqcGdeQWFybm8@._V1_.jpg",
     rating: "6.7",
     year: "2024",
     duration: "1h 55m",
@@ -79,9 +79,9 @@ export const allContent = [
     id: 6,
     title: "Avatar: Fire and Ash",
     poster:
-      "https://i.postimg.cc/QtV67thy/AVATAR-FIRE-AND-ASH-FIRST-OFFICIAL-POSTER-WITH-VARANG.jpg",
+      "https://m.media-amazon.com/images/M/MV5BZDYxY2I1OGMtN2Y4MS00ZmU1LTgyNDAtODA0MzAyYjI0N2Y2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     backdrop:
-      "https://i.postimg.cc/QtV67thy/AVATAR-FIRE-AND-ASH-FIRST-OFFICIAL-POSTER-WITH-VARANG.jpg",
+      "https://i0.wp.com/awardswatch.com/wp-content/uploads/2025/12/avatar-fire-ash.png?resize=640%2C360&ssl=1",
     rating: "8.0",
     year: "2025",
     duration: "3h",
@@ -94,8 +94,8 @@ export const allContent = [
   {
     id: 7,
     title: "Stranger Things",
-    poster: "https://i.postimg.cc/nh4FXLPQ/Stranger-Things-5-wallpaper.jpg",
-    backdrop: "https://i.postimg.cc/nh4FXLPQ/Stranger-Things-5-wallpaper.jpg",
+    poster: "https://fr.web.img6.acsta.net/img/b6/40/b640b5857449902c32431fca38df4122.jpg",
+    backdrop: "https://imagem.natelinha.uol.com.br/original/stranger-things_5909.jpeg",
     rating: "8.7",
     year: "2016",
     duration: "5 Seasons",
@@ -127,9 +127,9 @@ export const allContent = [
     id: 9,
     title: "Attack On Titan",
     poster:
-      "https://i.postimg.cc/htTRJ2pf/Attack-On-Titan-Japanese-Anime-Poster.jpg",
+      "https://aot-portal.com/wp/wp-content/uploads/2024/11/animation_tv_sf_img-scaled-1600x2259.webp",
     backdrop:
-      "https://i.postimg.cc/htTRJ2pf/Attack-On-Titan-Japanese-Anime-Poster.jpg",
+      "https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/hulu/C624234616EC620D83B2A85CEC8DD30494DA175D8634EB9B8319CB776F8B5B58/scale?format=webp&width=1200",
     rating: "9.1",
     year: "2013",
     duration: "4 Seasons",
@@ -144,8 +144,8 @@ export const allContent = [
   {
     id: 10,
     title: "Game Of Thrones",
-    poster: "https://i.postimg.cc/Sx3j41jg/Game-of-thrones-(1).jpg",
-    backdrop: "https://i.postimg.cc/Sx3j41jg/Game-of-thrones-(1).jpg",
+    poster: "https://lecoindescritiquescine.com/wp-content/uploads/2016/08/game-of-thrones-poster.jpg",
+    backdrop: "https://actualitte.com/uploads/images/game-of-thrones--4f03ccc9-e860-4299-b252-dbb3ddc7b849.jpg",
     rating: "9.2",
     year: "2011",
     duration: "8 Seasons",
@@ -176,8 +176,8 @@ export const allContent = [
   {
     id: 12,
     title: "Zootopia 2",
-    poster: "https://i.postimg.cc/bNkrH9v1/Zootopia-2.jpg",
-    backdrop: "https://i.postimg.cc/bNkrH9v1/Zootopia-2.jpg",
+    poster: "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_.jpg",
+    backdrop: "https://statcdn.fandango.com/MPX/image/NBCU_Fandango/514/639/thumb_74C7AB2A-1E02-4104-AA36-6D7FCFC2046C.jpg",
     rating: "9.8",
     year: "2025",
     duration: "2h",
