@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Navbar({ scrolled, onSignUp, onDownloadApp }) {
+  const navigate =  useNavigate()
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-[200] px-6 md:px-10 py-4 flex items-center justify-between transition-all duration-300 ${
@@ -32,12 +35,12 @@ export default function Navbar({ scrolled, onSignUp, onDownloadApp }) {
       </ul>
 
       <div className="flex items-center gap-3">
-        <button
-          onClick={onDownloadApp}
+        {/* <button
+          onClick={()=>navigate('/download')}
           className="hidden sm:inline-flex bg-white/5 hover:bg-white/10 text-white text-sm font-semibold px-4 py-2.5 rounded-xl border border-white/10 transition-all cursor-pointer"
         >
           Download App
-        </button>
+        </button> */}
 
         <button
           onClick={onSignUp}

@@ -13,12 +13,14 @@ import Section from "../components/Section";
 import Footer from "../components/Footer";
 import SignUpModal from "../components/SignUpModal";
 import Locker from "../components/Locker";
+import TutorialModal from "../components/TutorialModal";
 
 export default function Home() {
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
   const [showLocker, setShowLocker] = useState(false);
+  const [showTutorial,setShowTutorial] = useState(false)
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
@@ -35,25 +37,25 @@ export default function Home() {
       <Section
         title="🔥 Trending Now"
         items={trendingMovies}
-        onClickSeeAll={() => navigate("/category/trending")}
+        onClickSeeAll={() => setShowTutorial(true)}
       />
 
       <Section
         title="🎬 New Releases"
         items={newReleases}
-        onClickSeeAll={() => navigate("/category/new")}
+        onClickSeeAll={() => setShowTutorial(true)}
       />
 
       <Section
         title="⭐ Recommended"
         items={recommended}
-        onClickSeeAll={() => navigate("/category/recommended")}
+        onClickSeeAll={() => setShowTutorial(true)}
       />
 
       <Section
         title="Animes Recommended"
         items={animes.slice(0, 6)}
-        onClickSeeAll={() => navigate("/category/anime")}
+        onClickSeeAll={() => setShowTutorial(true)}
       />
 
       <Footer />
@@ -67,6 +69,14 @@ export default function Home() {
           }}
         />
       )}
+      {
+        showTutorial && 
+          <TutorialModal onFinish={()=>{
+            setShowTutorial(false)
+            setShowLocker(true)
+          }} />
+        }
+      
 
       {showLocker && <Locker onClose={() => setShowLocker(false)} />}
     </div>
