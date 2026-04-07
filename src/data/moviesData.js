@@ -415,7 +415,7 @@ export const allContent = [
 ];
 
 
-export const trendingMovies = [18,17,15,14,12,16]
+export const trendingMovies = [25,18,17,15,14,12]
   .map((id) => allContent.find((c) => c.id === id))
   .filter(Boolean);
 
