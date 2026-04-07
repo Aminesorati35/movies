@@ -398,6 +398,20 @@ export const allContent = [
   seasons: 1,
   episodesPerSeason: [12],
 },
+{
+  id: 25,
+  title: "Clika",
+  poster: "https://m.media-amazon.com/images/M/MV5BODcwNmNhNjEtNDE2Yi00MWUxLTk4MDEtYTcyMzlkOGYwYzRkXkEyXkFqcGc@._V1_.jpg",
+  backdrop: "https://variety.com/wp-content/uploads/2026/01/Clika.jpg?w=1000&h=667&crop=1",
+  rating: "8.9",
+  year: "2026",
+  duration: "1h 22m",
+  quality: "HD",
+  type: "mobie",
+  genres: ["Music", "Drama"],
+  description:
+    "A small town musician pushes to carve out a place for himself in the new wave of Mexican-American music after a clip of him performing one of his songs goes viral.",
+},
 ];
 
 
