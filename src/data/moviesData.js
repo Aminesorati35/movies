@@ -407,15 +407,29 @@ export const allContent = [
   year: "2026",
   duration: "1h 22m",
   quality: "HD",
-  type: "mobie",
+  type: "movie",
   genres: ["Music", "Drama"],
   description:
     "A small town musician pushes to carve out a place for himself in the new wave of Mexican-American music after a clip of him performing one of his songs goes viral.",
 },
+{
+  id: 26,
+  title: "Face Of Death",
+  poster: "https://m.media-amazon.com/images/M/MV5BMGJlZjY2ZGMtYjY0Ny00MTFmLTg0YTItM2MzYTQ4ZGNjMzkxXkEyXkFqcGc@._V1_.jpg",
+  backdrop: "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2026/03/facesofdeath-BarbieFerreira.jpg?fit=1280%2C720&ssl=1",
+  rating: "8.9",
+  year: "2026",
+  duration: "1h 37m",
+  quality: "HD",
+  type: "movie",
+  genres: ["Horror", "Splatter Horror"],
+  description:
+    "A woman, employed as a website content moderator, comes across a series of violent videos reproducing death scenes from a film.",
+},
 ];
 
 
-export const trendingMovies = [25,18,17,15,14,12]
+export const trendingMovies = [26,25,18,17,15,14]
   .map((id) => allContent.find((c) => c.id === id))
   .filter(Boolean);
 
