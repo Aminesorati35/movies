@@ -31,7 +31,7 @@ export default function Hero({ onOpenDetail }) {
   };
 
   return (
-    <section className="relative h-screen flex items-center overflow-hidden">
+    <section className="relative h-screen flex items-center overflow-hidden pt-[8.5rem] md:pt-[7.5rem]">
       <img
         src={m.backdrop}
         alt=""
