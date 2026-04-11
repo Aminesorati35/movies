@@ -414,7 +414,7 @@ export const allContent = [
 },
 {
   id: 26,
-  title: "Face Of Death",
+  title: "Faces Of Death",
   poster: "https://m.media-amazon.com/images/M/MV5BMGJlZjY2ZGMtYjY0Ny00MTFmLTg0YTItM2MzYTQ4ZGNjMzkxXkEyXkFqcGc@._V1_.jpg",
   backdrop: "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2026/03/facesofdeath-BarbieFerreira.jpg?fit=1280%2C720&ssl=1",
   rating: "8.9",
