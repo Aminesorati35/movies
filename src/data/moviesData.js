@@ -426,10 +426,27 @@ export const allContent = [
   description:
     "A woman, employed as a website content moderator, comes across a series of violent videos reproducing death scenes from a film.",
 },
+{
+  id: 27,
+  title: "Euphoria",
+  poster: "https://preview.redd.it/euphoria-season-3-official-poster-v0-0i9m521uj1rg1.jpeg?width=640&crop=smart&auto=webp&s=da653294a852010c09150fe79203978cbff82b05",
+  backdrop: "https://image.tmdb.org/t/p/original/oKt4J3TFjWirVwBqoHyIvv5IImd.jpg",
+  rating: "8.4",
+  year: "2019",
+  duration: "2 Seasons",
+  quality: "HD",
+  type: "tv",
+  category: "series",
+  genres: ["Drama"],
+  description:
+    "A group of high school students navigate love, identity, trauma, and addiction, following Rue, a teenager struggling with substance abuse.",
+  seasons: 3,
+  episodesPerSeason: [8, 8,8],
+},
 ];
 
 
-export const trendingMovies = [26,25,18,17,15,14]
+export const trendingMovies = [27,26,25,18,17,15,14]
   .map((id) => allContent.find((c) => c.id === id))
   .filter(Boolean);
 
