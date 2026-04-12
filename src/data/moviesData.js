@@ -441,7 +441,7 @@ export const allContent = [
   description:
     "A group of high school students navigate love, identity, trauma, and addiction, following Rue, a teenager struggling with substance abuse.",
   seasons: 3,
-  episodesPerSeason: [8, 8,8],
+  episodesPerSeason: [8, 8,1],
 },
 ];
 
