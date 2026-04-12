@@ -429,7 +429,7 @@ export const allContent = [
 {
   id: 27,
   title: "Euphoria Season 3",
-  poster: "https://preview.redd.it/euphoria-season-3-official-poster-v0-0i9m521uj1rg1.jpeg?width=640&crop=smart&auto=webp&s=da653294a852010c09150fe79203978cbff82b05",
+  poster: "https://pbs.twimg.com/media/HE9qMvUaUAAScjn.jpg",
   backdrop: "https://image.tmdb.org/t/p/original/oKt4J3TFjWirVwBqoHyIvv5IImd.jpg",
   rating: "8.4",
   year: "2019",

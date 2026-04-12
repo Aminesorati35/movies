@@ -80,19 +80,7 @@ export default function Navbar({
         </div>
       </div>
 
-      <ul className="flex md:hidden justify-center gap-5 list-none px-6 pb-1 -mt-1">
-        {NAV_LINKS.map(({ key, label }) => (
-          <li key={`m-${label}`}>
-            <a
-              href={key === "home" ? "/" : "#"}
-              className={linkClass}
-              onClick={(e) => handleNavClick(key, e)}
-            >
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
+      
 
       <div className="w-full px-6 md:px-10 pb-4 flex justify-center">
         <form
