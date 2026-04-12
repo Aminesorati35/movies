@@ -252,7 +252,6 @@ export default function DetailPage() {
                     <p className="text-white text-sm font-semibold">
                       Episode {i + 1}
                     </p>
-                    <p className="text-white/30 text-xs mt-0.5">~24 min</p>
                   </div>
                 </div>
               ))}
