@@ -277,7 +277,7 @@ export const allContent = [
   genres: ["Drama", "Romance"],
   description:
     "A happily engaged couple is put to the ultimate test when an unexpected twist turns their wedding week into chaos. As emotions rise and secrets begin to surface, their love faces challenges that could either strengthen their bond or tear them apart forever.",
-  //videoUrl: "https://oncima.com/fmovie/assets/video/Materialists.mp4",
+  videoUrl: "https://oncima.com/fmovie/assets/video/Materialists.mp4",
   },
   {
   id: 19,
@@ -442,6 +442,7 @@ export const allContent = [
     "A group of high school students navigate love, identity, trauma, and addiction, following Rue, a teenager struggling with substance abuse.",
   seasons: 3,
   episodesPerSeason: [8, 8,1],
+  videoUrl: "https://oncima.com/fmovie/assets/video/derry.mp4",
 },
 ];
 
