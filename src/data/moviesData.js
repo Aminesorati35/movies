@@ -444,10 +444,24 @@ export const allContent = [
   episodesPerSeason: [8, 8,1],
   videoUrl: "https://oncima.com/fmovie/assets/video/derry.mp4",
 },
+{
+  id: 28,
+  title: "Avatar: Aang, The Last Airbender",
+  poster: "https://image.tmdb.org/t/p/original/gPiyTLo5GGwtJl0L8TlaJF9r0KE.jpg",
+  backdrop: "https://image.tmdb.org/t/p/original/sS3zGYFPcfM5pArVNWl6qLyaSmU.jpg",
+  rating: "9.3",
+  year: "2026",
+  duration: "1h 49m",
+  quality: "HD",
+  type: "movie",
+  genres: ["Adventure", "Animation", "Fantasy, and Family"],
+  description:
+    "Avatar Aang, the world's last Airbender, learns of an ancient power that could save his culture from extinction. With the help of his friends, he embarks on a global quest to find it before it falls into the wrong hands and threatens to upend the peace they sacrificed everything to achieve..",
+},
 ];
 
 
-export const trendingMovies = [27,26,25,18,17,15,14]
+export const trendingMovies = [28,27,26,25,18,17,15,14]
   .map((id) => allContent.find((c) => c.id === id))
   .filter(Boolean);
 
