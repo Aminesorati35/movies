@@ -458,10 +458,28 @@ export const allContent = [
   description:
     "Avatar Aang, the world's last Airbender, learns of an ancient power that could save his culture from extinction. With the help of his friends, he embarks on a global quest to find it before it falls into the wrong hands and threatens to upend the peace they sacrificed everything to achieve..",
 },
+{
+  id: 29,
+  title: "House of the Dragon",
+  poster: "https://preview.redd.it/full-poster-for-house-of-the-dragon-season-3-v0-wvyt5wh8mizg1.jpeg?width=1080&crop=smart&auto=webp&s=5719a0241a0825f57e012d78438a605584b66a97",
+  backdrop: "https://media.gqmagazine.fr/photos/69f0a6ff091936f1719bccdb/16:9/w_2560%2Cc_limit/matt-smith.jpg",
+  rating: "8.4",
+  year: "2022",
+  duration: "3 Seasons",
+  quality: "HD",
+  type: "tv",
+  category: "series",
+  genres: ["Drama", "Fantasy", "Action"],
+  description:
+    "Set nearly 200 years before the events of Game of Thrones, House of the Dragon follows the rise and fall of House Targaryen and the brutal civil war known as the Dance of the Dragons.",
+  seasons: 3,
+  episodesPerSeason: [10, 8, 8],
+  videoUrl: "https://oncima.com/fmovie/assets/video/derry.mp4",
+},
 ];
 
 
-export const trendingMovies = [28,27,26,25,18,17,15,14]
+export const trendingMovies = [29,27,26,25,18,17,15,14]
   .map((id) => allContent.find((c) => c.id === id))
   .filter(Boolean);
 

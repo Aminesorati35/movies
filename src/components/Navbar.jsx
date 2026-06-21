@@ -85,7 +85,7 @@ export default function Navbar({
 
       {!isDetailPage && (
   <div className="w-full px-6 md:px-10 pb-4 flex justify-center">
-    <form
+    {/* <form
       onSubmit={handleSearchSubmit}
       className="w-full max-w-xl flex gap-2 items-stretch"
     >
@@ -102,7 +102,7 @@ export default function Navbar({
       >
         Search
       </button>
-    </form>
+    </form> */}
   </div>
 )}
     </nav>
