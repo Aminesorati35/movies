@@ -523,7 +523,7 @@ export const newReleases = allContent.filter((c) =>
 export const recommended = allContent.filter((c) =>
   [12, 9, 10, 7, 4, 5].includes(c.id)
 );
-export const heroMovies = [18,15, 16, 14, 5,9,11]
+export const heroMovies = [30,15, 16, 14, 5,9,11]
   .map((id) => allContent.find((c) => c.id === id))
   .filter(Boolean);
 
