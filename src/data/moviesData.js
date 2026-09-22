@@ -476,10 +476,43 @@ export const allContent = [
   episodesPerSeason: [10, 8, 8],
   videoUrl: "https://oncima.com/fmovie/assets/video/derry.mp4",
 },
+{
+  id: 29,
+  title: "House of the Dragon",
+  poster: "https://preview.redd.it/full-poster-for-house-of-the-dragon-season-3-v0-wvyt5wh8mizg1.jpeg?width=1080&crop=smart&auto=webp&s=5719a0241a0825f57e012d78438a605584b66a97",
+  backdrop: "https://media.gqmagazine.fr/photos/69f0a6ff091936f1719bccdb/16:9/w_2560%2Cc_limit/matt-smith.jpg",
+  rating: "8.4",
+  year: "2022",
+  duration: "3 Seasons",
+  quality: "HD",
+  type: "tv",
+  category: "series",
+  genres: ["Drama", "Fantasy", "Action"],
+  description:
+    "Set nearly 200 years before the events of Game of Thrones, House of the Dragon follows the rise and fall of House Targaryen and the brutal civil war known as the Dance of the Dragons.",
+  seasons: 3,
+  episodesPerSeason: [10, 8, 8],
+  videoUrl: "https://oncima.com/fmovie/assets/video/derry.mp4",
+},
+{
+id: 30,
+title: "Resident Evil 2026",
+poster: "https://m.media-amazon.com/images/M/MV5BZGVmNzRlZTctNTU2OS00MTQwLWI2ZWQtOGViMjc4ODNlNzVmXkEyXkFqcGc@._V1_.jpg",
+backdrop: "https://m.media-amazon.com/images/M/MV5BNDY1MjU2MjQtNmY3OC00ODRiLWE0YzUtOWNjYjVhN2E2ZmMzXkEyXkFqcGdeQWpnYW1i._V1_.jpg",
+rating: "7.7",
+year: "2026",
+duration: "1h 34m",
+quality: "HD",
+type: "movie",
+genres: ["Horror", "Action", "Science Fiction"],
+description:
+"A hapless courier is tasked with delivering a package to a remote hospital. He soon finds himself caught in the middle of an outbreak and must fight through hordes of mutated creatures to survive."
+},
+
 ];
 
 
-export const trendingMovies = [29,27,26,25,18,17,15,14]
+export const trendingMovies = [30,29,26,25,18,17,15,14,27]
   .map((id) => allContent.find((c) => c.id === id))
   .filter(Boolean);
 
