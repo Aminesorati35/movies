@@ -249,14 +249,20 @@ export default function DetailPage() {
             setShowAccessPrompt(false);
             setStep("prompt");
           }}
-          onContinue={() => setStep("tutorial")}
+          onContinue={() => {
+            setShowAccessPrompt(false);
+            setShowLocker(true);
+              setStep("propmpt");
+
+
+          }}
           title={content.title}
           backdrop={content.backdrop}
           poster={content.poster}
         />
       )}
 
-      {showAccessPrompt && step === "tutorial" && (
+      {/* {showAccessPrompt && step === "tutorial" && (
         <TutorialModal
           onFinish={() => {
             setShowAccessPrompt(false);
@@ -264,7 +270,7 @@ export default function DetailPage() {
             setStep("prompt");
           }}
         />
-      )}
+      )} */}
 
       {showLocker && <Locker />}
     </div>
